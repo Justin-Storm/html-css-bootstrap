@@ -1,0 +1,368 @@
+:root {
+    --highlight: #10c9c3;
+    --background: #787878;
+    --font: #141414;
+    --background2: #f5f5f5;
+    --white: #fff;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+#navbar {
+    transition: 0.3s ease;
+
+    button.navbar-toggler {
+        border: none;
+        box-shadow: none;
+    }
+
+    .nav-link.active {
+        color: var(--highlight);
+    }
+    .nav-link:hover {
+        color: var(--highlight);
+    }
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+   
+    /*
+    background: var(--background);
+    */
+}
+
+#home {
+    padding-top: 10rem;
+    padding-bottom: 5.5rem;
+    background: url('images/aidan-hancock-8RU4OuA6Yug-unsplash.png') center/cover no-repeat;
+
+    a.button {
+        background: var(--highlight);
+        padding: 14px 40px;
+        color: var(--white);
+        text-decoration: none;
+    }
+    a.button:hover {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), var(--highlight);
+    }
+    .text {
+        p {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    #home {
+        height: 100vh;
+        min-height: 40rem;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        .col-6 {
+            margin-left: auto;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+    .navbar.scrolled {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    #home .container-fluid .row .col-6 {
+        width: 100%;
+
+        .text {
+            margin: auto;
+            width: 75%;
+        }
+    }
+}
+
+.about1#about {
+    background: var(--white);
+
+    .container {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}
+
+#about .about2 {
+
+    .col-lg-6.text {
+        background: var(--background2);
+        display: flex;
+        align-items: center;
+        height: 500px;
+
+        .text {
+            width: 100%;
+
+            p {
+                margin-bottom: 7px;
+            }
+        }
+
+        .progress {
+            background: var(--background);
+        }
+        .progress.mb {
+            margin-bottom: 35px;
+        }
+    }
+
+    .col-lg-6.image {
+        background: url('images/stil-sHGyGynyD5Y-unsplash.png') center/cover;
+        height: 500px;
+    }
+}
+
+#about .about3 {
+    background: var(--highlight);
+
+    .col-lg-3 {
+        display: flex;
+        justify-content: center;
+
+        img {
+            height: 50px;
+            width: auto;
+        }
+        h3 {
+            font-size: 20px;
+        }
+        p {
+            font-size: 14px;
+            margin-bottom: 0;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    #about .about3 {
+
+        .col-lg-3 {
+            display: flex;
+            justify-content: initial;
+        }
+
+        .col-lg-3.mb {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+#work {
+    .portfolio-box {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 400px;
+
+        .portfolio-box-caption {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.75);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            opacity: 0;
+            transition: 0.5s ease;
+        }
+        .portfolio-box-caption:hover {
+            opacity: 1;
+        }
+    }
+    .portfolio-box.img1 {
+        background: url('images/Package\ Design\ Lemon\ Tea\ -\ fabian\ krotzer\ Frame.png') center/cover no-repeat;
+    }
+    .portfolio-box.img2 {
+        background: url('images/Package\ Design\ Vanilla\ Powder\ -\ fabian\ krotzer\ Frame.png') center/cover no-repeat;
+    }
+    .portfolio-box.img3 {
+        background: url('images/Package\ Design\ Coconut\ -\ fabian\ krotzer\ Frame.png') center/cover no-repeat;
+    }
+    .portfolio-box.img4 {
+        background: url('images/Package\ Design\ Komaso\ -\ fabian\ krotzer\ Frame.png') center/cover no-repeat;
+    }
+    .portfolio-box.img5 {
+        background: url('images/Package\ Design\ Spices\ -\ fabian\ krotzer\ Frame.png') center/cover no-repeat;
+    }
+    .portfolio-box.img6 {
+        background: url('images/Package\ Design\ Salad\ -\ fabian\ krotzer\ Frame.png') center/cover no-repeat;
+    }
+    .portfolio-box.img7 {
+        background: url('images/Package\ Design\ Olive\ Oil\ -\ fabian\ krotzer\ Frame.png') center/cover no-repeat;
+    }
+    .portfolio-box.img8 {
+        background: url('images/Package\ Design\ Seaweed\ -\ fabian\ krotzer\ Frame.png') center/cover no-repeat;
+    }
+}
+
+#services {
+    
+    h1 {
+        margin-bottom: 75px;
+        color: var(--font);
+    }
+
+    h5 {
+        text-transform: uppercase;
+        color: var(--font);
+    }
+
+    p {
+        color: var(--background);
+    }
+
+    .col-lg-3.mb {
+        margin-bottom: 75px;
+    }
+}
+
+#testimonials {
+    height: 45vh;
+    background: var(--highlight);
+    display: flex;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        p.quote {
+            color: var(--white);
+            font-size: 28px;
+        }
+    
+        p.name {
+            color: var(--white);
+        }
+    }
+}
+
+div.container-fluid.logos {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    display: flex;
+    gap: 70px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#contact {
+    background: rgb(220, 220, 220);
+
+    h1 {
+        color: var(--font);
+        margin-bottom: 25px;
+    }
+    p {
+        color: var(--background);
+        margin-bottom: 25px;
+    }
+}
+
+#contact .row {
+    display: flex;
+    justify-content: center;
+}
+
+#contact .row:nth-child(1),
+#contact .row:nth-child(2),
+#contact .row:nth-child(3) {
+    padding-bottom: 22px;
+}
+
+#contact .row input,
+#contact .row textarea {
+    background: var(--white);
+    color: var(--font);
+    box-shadow: none;
+    border: none;
+}
+
+#contact .row textarea {
+    height: 8rem;
+}
+
+@media (max-width: 768px) {
+    #contact .row:nth-child(1) .col-lg-3:nth-child(1) {
+        padding-bottom: 22px;
+    }
+}
+
+#contact .row button {
+    width: auto;
+    padding: 14px 40px;
+    background: var(--highlight);
+    border: none;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+#contact .row button:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), var(--highlight);
+}
+
+footer .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+footer .text {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .text p.company {
+    color: var(--white);
+}
+
+footer .text a,
+footer .text p.copywrite {
+    text-decoration: none;
+    color: var(--background);
+}
+
+footer .text a:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
